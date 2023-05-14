@@ -1,0 +1,132 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap");
+
+body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: #FDFEFE;
+
+}
+
+button {
+  font-family: "Inter", sans-serif;
+}
+
+:root {
+  --offcanvas-width: 270px;
+  --topNavbarHeight: 56px;
+}
+
+.sidebar-nav {
+  width: var(--offcanvas-width);
+}
+
+.sidebar-link {
+  display: flex;
+  align-items: center;
+}
+
+.sidebar-link .right-icon {
+  display: inline-flex;
+}
+
+.sidebar-link[aria-expanded="true"] .right-icon {
+  transform: rotate(180deg);
+}
+
+@media (min-width: 992px) {
+  body {
+    overflow: auto !important;
+  }
+
+  /*contenedor*/
+  .main-prueba {
+    margin-left: var(--offcanvas-width);
+
+  }
+
+  .offcanvas-backdrop::before {
+    display: none;
+  }
+
+  .sidebar-nav {
+    -webkit-transform: none;
+    transform: none;
+    visibility: visible !important;
+    height: calc(100% - var(--topNavbarHeight));
+    top: var(--topNavbarHeight);
+  }
+}
+
+
+.login-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 90vh;
+}
+
+.form {
+  width: 450px;
+}
+
+a {
+  text-decoration: none;
+}
+
+
+.main-footer {
+
+
+  background: #111;
+  color: #fff;
+  padding: 4px;
+  text-align: center;
+  margin-top: auto;
+
+}
+
+
+.Example {
+  display: none;
+}
+
+.container-404 {
+  background: #000428;
+  background: linear-gradient(to right, #198754, #000428);
+  color: #fff;
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-container {
+  background: #198754;
+  /*background: -webkit-linear-gradient(to right, #198754, #0575E6);*/
+  background: linear-gradient(to right, #16412d, #198754);
+
+}
+
+#btn-buscar-cliente {
+  width: 10%;
+}
+
+#select-huespedes {
+  width: 90%;
+}
+
+.efectivo,
+.tarjeta,
+.transferencia,
+.otros {
+  display: none;
+}
+
+.bg-orange{
+
+  background-color: darkorange;
+
+}
